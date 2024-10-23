@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mid Exam Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mid Exam Notes</h1>
+    </header>
+    <section>
+        <!-- Module 1 -->
+        <article>
+            <h2>Module 1: What is Machine Learning?</h2>
+            <p><strong>Supervised:</strong> Machine learning techniques automatically learn a model of the relationship between a set of descriptive features and a target feature.</p>
+            <h3>Why Use Machine Learning?</h3>
+            <ul>
+                <li>Machine Learning can help humans learn.</li>
+                <li>ML algorithms can be inspected to see what they have learned.</li>
+            </ul>
+            <h3>Types of Machine Learning Systems</h3>
+            <ul>
+                <li>Trained with human supervision or not.</li>
+                <li>Learn incrementally on the fly or not.</li>
+                <li>Compare new data points to known data points.</li>
+            </ul>
+            <h4>Categories of Machine Learning:</h4>
+            <ul>
+                <li>Supervised Learning</li>
+                <li>Unsupervised Learning</li>
+                <li>Semi-supervised Learning</li>
+                <li>Reinforcement Learning</li>
+            </ul>
+        </article>
+
+        <!-- Module 2 -->
+        <article>
+            <h2>Module 2: Simple Linear Regression</h2>
+            <p>Simple linear regression can be used to model a linear relationship between one response variable and one explanatory variable.</p>
+            <h3>Cost Functions</h3>
+            <p>Measures how well a machine learning model performs.</p>
+            <ul>
+                <li>Mean Squared Error (MSE)</li>
+                <li>Mean Absolute Error (MAE)</li>
+                <li>Cross-Entropy Loss</li>
+            </ul>
+            <h3>Gradient Descent (Optimization Algorithm)</h3>
+            <ul>
+                <li><strong>Batch Gradient Descent:</strong> Uses the entire dataset to compute the gradient.</li>
+                <li><strong>Stochastic Gradient Descent (SGD):</strong> Uses one sample at a time to compute the gradient.</li>
+                <li><strong>Mini-batch Gradient Descent:</strong> Uses a small batch of samples to compute the gradient.</li>
+            </ul>
+        </article>
+
+        <!-- Module 3 -->
+        <article>
+            <h2>Module 3: Classification</h2>
+            <p>Machine learning task that involves categorizing data based on their features.</p>
+            <h3>MNIST Dataset</h3>
+            <p>This dataset has been studied so much that it is often called the "Hello World" of Machine Learning.</p>
+            <h3>SGDClassifier</h3>
+            <p>This classifier has the advantage of being capable of handling very large datasets efficiently.</p>
+            <h3>Performance Measures</h3>
+            <ul>
+                <li><strong>Accuracy:</strong> The proportion of correctly classified instances out of the total instances evaluated.</li>
+                <li><strong>Precision:</strong> The proportion of true positive predictions among all positive predictions made by the model.</li>
+                <li><strong>Recall:</strong> The proportion of true positive predictions among all actual positive instances in the data.</li>
+            </ul>
+            <h3>Confusion Matrix</h3>
+            <p>A fundamental tool in evaluating the performance of a classification model.</p>
+            <h3>Receiver Operating Characteristic (ROC)</h3>
+            <p>The ROC curve is a powerful tool used to evaluate the performance of binary classification models.</p>
+            <h3>Error Analysis in Machine Learning</h3>
+            <p>Crucial for improving model performance after initial evaluation.</p>
+            <h4>Steps for Error Analysis:</h4>
+            <ul>
+                <li>Confusion Matrix</li>
+                <li>Cross-Validation Predictions</li>
+                <li>Visualizing and Interpreting the Confusion Matrix</li>
+                <li>Insights from the Confusion Matrix</li>
+                <li>Improvement Strategies</li>
+            </ul>
+            <h3>Feature Extraction and Preprocessing</h3>
+            <p>Necessity for transforming categorical, text, or image data into numeric formats.</p>
+            <h4>Types of Data:</h4>
+            <ul>
+                <li>Categorical Variables</li>
+                <li>Text Data</li>
+                <li>Image Data</li>
+            </ul>
+            <h3>Extracting Features from Categorical Variables</h3>
+            <p><strong>One-Hot Encoding:</strong> Method to convert categorical variables into binary features.</p>
+            <h3>Feature Extraction from Text</h3>
+            <p><strong>Bag-of-Words:</strong> Treats text as a collection of words, ignoring syntax, word order, and grammar.</p>
+            <h4>Challenges Implementing Bag-of-Words:</h4>
+            <ul>
+                <li>Increased memory requirements.</li>
+                <li>Many elements in the vectors are zero, creating sparse vectors.</li>
+                <li>As dimensionality increases, more training data is required.</li>
+                <li>Risk of overfitting if there are insufficient training instances.</li>
+                <li>Feature Selection: Selecting the most relevant features.</li>
+                <li>Dimensionality Reduction Techniques: Methods like PCA to reduce the number of features.</li>
+            </ul>
+            <h3>Extracting Features from Images</h3>
+            <p>Digital images are grids of pixels, with each pixel having an intensity value.</p>
+            <p>Example: Optical Character Recognition (OCR).</p>
+            <h4>Extracting Points of Interest:</h4>
+            <ul>
+                <li><strong>SIFT (Scale-Invariant Feature Transform):</strong> Captures edges and corners with information about surroundings.</li>
+                <li><strong>SURF (Speeded-Up Robust Features):</strong> Faster computation than SIFT, effective for recognizing features across transformed images.</li>
+            </ul>
+            <h3>Data Standardization in Machine Learning</h3>
+            <p>Standardization ensures that data has a zero mean and unit variance.</p>
+        </article>
+
+        <!-- Module 4 -->
+        <article>
+            <h2>Module 4: Linear Regression Concepts and Training</h2>
+            <p>Linear Regression models predictions as a weighted sum of features plus a bias term.</p>
+            <h3>The Normal Equation in Linear Regression</h3>
+            <p>The goal is to find the parameter vector θ that minimizes the cost function (Mean Squared Error).</p>
+            <h3>Computational Complexity</h3>
+            <ul>
+                <li><strong>Singular Value Decomposition (SVD):</strong> Complexity: O(n²).</li>
+                <li>The computational complexity of making predictions is linear with respect to both the number of instances m and the number of features n.</li>
+            </ul>
+            <h3>Gradient Descent Variants</h3>
+            <ul>
+                <li><strong>Gradient Descent:</strong> Complexity per iteration: O(mn), Total Complexity: O(kmn) for k iterations.</li>
+                <li><strong>Stochastic Gradient Descent (SGD):</strong> Complexity per iteration: O(n), Total Complexity: O(kn) for k iterations.</li>
+                <li><strong>Mini-Batch Gradient Descent:</strong> Complexity per iteration: O(bn), Total Complexity: O(kbn), where b is the batch size.</li>
+            </ul>
+            <h3>Comparison of Methods</h3>
+            <ul>
+                <li><strong>Normal Equation:</strong> Best for small to medium-sized datasets.</li>
+                <li><strong>SVD:</strong> Best for medium-sized datasets.</li>
+                <li><strong>Gradient Descent:</strong> Best for large datasets and large feature sets.</li>
+            </ul>
+            <h3>Polynomial Regression</h3>
+            <p>Technique used to fit a linear model to nonlinear data by transforming the original features into polynomial features of a given degree.</p>
+            <h3>Learning Curves in Machine Learning</h3>
+            <p>Visual tools used to diagnose how well a model is learning from data.</p>
+            <h4>Common Issues:</h4>
+            <ul>
+                <li>Overfitting</li>
+                <li>Underfitting</li>
+            </ul>
+            <h3>Regularized Linear Models</h3>
+            <p>Regularization techniques prevent overfitting by adding a penalty to the model's complexity.</p>
+            <ul>
+                <li><strong>Ridge Regression (L2):</strong> Adds a penalty equal to the sum of the squares of the coefficients.</li>
+                <li><strong>Lasso Regression (L1):</strong> Adds a penalty equal to the sum of the absolute values of the coefficients.</li>
+                <li><strong>Elastic Net:</strong> Combines both L1 and L2 regularization.</li>
+                <li><strong>Early Stopping:</strong> Stops training when validation error stops improving.</li>
+            </ul>
+            <h3>Binary Classification with Logistic Regression</h3>
+            <p>Models the probability of a binary outcome based on one or more predictor variables.</p>
+            <h4>Performance Metrics:</h4>
+            <ul>
+                <li>Accuracy</li>
+                <li>Precision</li>
+                <li>Recall</li>
+                <li>F1 Score</li>
+                <li>ROC AUC</li>
+            </ul>
+            <h3>Grid Search for Hyperparameter Tuning</h3>
+            <p>A technique used to find the optimal values for hyperparameters.</p>
+        </article>
+
+        <!-- Module 5 -->
+        <article>
+            <h2>Module 5: Support Vector Machines (SVM)</h2>
+            <p>Support Vector Machines are powerful tools for classification, regression, and outlier detection.</p>
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Hyperplane:</strong> A decision boundary that separates different classes.</li>
+                <li><strong>Support Vectors:</strong> Data points that lie closest to the hyperplane.</li>
+                <li><strong>Margin:</strong> The distance between the hyperplane and the closest support vectors.</li>
+            </ul>
+            <h3>Advantages:</h3>
+            <ul>
+                <li>Effective in high-dimensional spaces.</li>
+                <li>Versatile with different kernel functions.</li>
+                <li>Works well with small- to medium-sized datasets.</li>
+            </ul>
+            <h3>Hard Margin vs. Soft Margin Classification</h3>
+            <p>Hard Margin requires all training instances to be on the correct side of the margin, while Soft Margin allows some misclassifications.</p>
+            <h3>Tuning Hyperparameter C</h3>
+            <ul>
+                <li>Smaller C: Wider margin with more margin violations.</li>
+                <li>Larger C: Narrower margin with fewer margin violations.</li>
+            </ul>
+            <h3>Nonlinear SVM Classification</h3>
+            <p>SVMs can handle nonlinear datasets using kernel tricks.</p>
+            <h4>Kernel Functions:</h4>
+            <ul>
+                <li>Polynomial Kernel</li>
+                <li>Gaussian RBF Kernel</li>
+                <li>Sigmoid Kernel</li>
+            </ul>
+            <h3>Kernel Trick</h3>
+            <p>Allows computation of inner products in higher-dimensional spaces without explicit mapping.</p>
+            <h3>Sequential Minimal Optimization (SMO)</h3>
+            <p>An algorithm to solve the quadratic programming problem for SVMs by breaking it into smaller subproblems.</p>
+        </article>
+
+        <!-- Module 6 -->
+        <article>
+            <h2>Module 6: Decision Trees</h2>
+            <p>Decision Trees can perform classification and regression tasks.</p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Data is split based on feature values.</li>
+                <li>Each node represents a decision point.</li>
+                <li>The goal is to create branches that lead to pure leaf nodes.</li>
+                <li>Leaf nodes represent the final class prediction.</li>
+            </ul>
+            <h3>Visualization Tools:</h3>
+            <ul>
+                <li>Graphviz</li>
+                <li>Scikit-Learn's plot_tree</li>
+            </ul>
+        </article>
+
+        <!-- Module 7 -->
+        <article>
+            <h2>Module 7: Ensemble Learning</h2>
+            <p>Combining the predictions of multiple predictors to improve accuracy.</p>
+            <h3>Power of Random Forests</h3>
+            <ul>
+                <li>Reduce overfitting by averaging multiple trees.</li>
+                <li>Often outperform single Decision Trees.</li>
+                <li>Combine several good predictors into an even better one.</li>
+            </ul>
+            <h3>Popular Ensemble Methods</h3>
+            <ul>
+                <li><strong>Bagging:</strong> Bootstrap Aggregating.</li>
+                <li><strong>Boosting:</strong> Sequentially training models to correct errors of previous models.</li>
+                <li><strong>Stacking:</strong> Combining predictions of multiple models using a meta-model.</li>
+                <li><strong>Random Forests:</strong> Averaging multiple decision trees trained on random subsets.</li>
+            </ul>
+            <h3>Voting Classifiers</h3>
+            <p>Aggregate predictions of multiple classifiers to improve accuracy.</p>
+            <h4>Types:</h4>
+            <ul>
+                <li>Hard Voting</li>
+                <li>Soft Voting</li>
+            </ul>
+            <h3>Bagging and Pasting</h3>
+            <ul>
+                <li><strong>Bagging:</strong> Sampling with replacement.</li>
+                <li><strong>Pasting:</strong> Sampling without replacement.</li>
+            </ul>
+            <h3>Training Process</h3>
+            <p>Both methods allow training instances to be sampled multiple times across different predictors.</p>
+            <h3>Random Patches and Random Subspaces</h3>
+            <ul>
+                <li><strong>Random Patches:</strong> Sampling both training instances and features.</li>
+                <li><strong>Random Subspaces:</strong> Sampling features without sampling instances.</li>
+            </ul>
+            <h3>Boosting</h3>
+            <p>Combining weak learners to create a strong learner through sequential training.</p>
+            <h3>Stacking</h3>
+            <p>An advanced ensemble learning technique that trains a model to combine predictions from multiple models.</p>
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Improved Performance</li>
+                <li>Flexibility</li>
+                <li>Versatility</li>
+            </ul>
+            <h4>Practical Considerations:</h4>
+            <ul>
+                <li>Model Complexity</li>
+                <li>Computational Cost</li>
+            </ul>
+        </article>
+    </section>
+</body>
+</html>
